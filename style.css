@@ -404,7 +404,7 @@ ul {
 .dichvu .dichvu-slider .slick-prev {
   position: absolute;
   top: 50%;
-  left: 10px;
+  left: 20px;
   color: transparent;
   transform: translateY(-50%);
   width: 20px;
@@ -412,14 +412,15 @@ ul {
   background-color: transparent;
   background-image: url(image/prebutton.png);
   background-position: center;
-  background-size: auto;
+  background-size: contain;
   background-repeat: no-repeat;
   z-index: 1;
+  filter: brightness(2);
 }
 .dichvu .dichvu-slider .slick-next {
   position: absolute;
   top: 50%;
-  right: 10px;
+  right: 20px;
   color: transparent;
   transform: translateY(-50%);
   width: 20px;
@@ -427,33 +428,36 @@ ul {
   background-color: transparent;
   background-image: url(image/nextbuton.png);
   background-position: center;
-  background-size: auto;
+  background-size: contain;
   background-repeat: no-repeat;
   z-index: 1;
+  filter: brightness(2);
 }
 .dichvu .dichvu-slider::after {
   content: "";
   position: absolute;
   top: 50%;
-  right: 0px;
+  right: 10px;
   transform: translateY(-50%);
   width: 40px;
   aspect-ratio: 1;
   background-color: #EAEAEA;
   z-index: 0;
   border-radius: 50%;
+  opacity: 0.3;
 }
 .dichvu .dichvu-slider::before {
   content: "";
   position: absolute;
   top: 50%;
-  left: 0px;
+  left: 10px;
   transform: translateY(-50%);
   width: 40px;
   aspect-ratio: 1;
   background-color: #EAEAEA;
   z-index: 1;
   border-radius: 50%;
+  opacity: 0.3;
 }
 .dichvu .dichvu-slider .dichvu-slider-item {
   background-color: #608127;
