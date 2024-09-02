@@ -85,6 +85,11 @@ ul {
   padding: 10px 0;
   position: relative;
 }
+@media (max-width: 1100px) {
+  .header .header-navbar {
+    font-size: 14px;
+  }
+}
 .header .header-navbar .header-navbar-icon {
   display: none;
   cursor: pointer;
@@ -256,7 +261,7 @@ ul {
   transform: translateX(0);
 }
 
-@media screen and (max-width: 1025px) {
+@media screen and (max-width: 992px) {
   .header-navbar-icon {
     display: block !important;
     margin-left: 20px;
@@ -325,7 +330,7 @@ ul {
   padding: 10px;
   text-align: center;
   color: white;
-  font-size: 1.1rem;
+  font-size: 16px;
   z-index: 1;
 }
 .banner .phone-contact a {
@@ -340,6 +345,16 @@ ul {
   bottom: 0;
   width: 100%;
   height: 45px;
+}
+@media (max-width: 992px) {
+  .banner .phone-contact {
+    font-size: 14px;
+  }
+}
+@media (max-width: 530px) {
+  .banner::after, .banner .phone-contact {
+    display: none;
+  }
 }
 .banner .banner-slick img {
   height: 100%;
@@ -389,7 +404,7 @@ ul {
 .dichvu .dichvu-slider .slick-prev {
   position: absolute;
   top: 50%;
-  left: 0px;
+  left: 10px;
   color: transparent;
   transform: translateY(-50%);
   width: 20px;
@@ -404,7 +419,7 @@ ul {
 .dichvu .dichvu-slider .slick-next {
   position: absolute;
   top: 50%;
-  right: 0px;
+  right: 10px;
   color: transparent;
   transform: translateY(-50%);
   width: 20px;
@@ -415,6 +430,30 @@ ul {
   background-size: auto;
   background-repeat: no-repeat;
   z-index: 1;
+}
+.dichvu .dichvu-slider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  transform: translateY(-50%);
+  width: 40px;
+  aspect-ratio: 1;
+  background-color: #EAEAEA;
+  z-index: 0;
+  border-radius: 50%;
+}
+.dichvu .dichvu-slider::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  transform: translateY(-50%);
+  width: 40px;
+  aspect-ratio: 1;
+  background-color: #EAEAEA;
+  z-index: 1;
+  border-radius: 50%;
 }
 .dichvu .dichvu-slider .dichvu-slider-item {
   background-color: #608127;
@@ -655,8 +694,13 @@ ul {
   padding: 60px 40px;
   color: white;
   font-weight: bold;
-  margin: 100px 50px;
+  margin: 50px;
   transition: all 0.5s;
+}
+@media (min-width: 1100px) {
+  .banggiadichvu .banggiadichvu-slick .banggiadichvu-item {
+    margin: 100px 50px;
+  }
 }
 .banggiadichvu .banggiadichvu-slick .banggiadichvu-item p {
   text-align: center;

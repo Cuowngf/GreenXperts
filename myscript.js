@@ -3,7 +3,7 @@ $(document).ready(function () {
 
     $('.banner-slick').slick({
         autoplay: true,
-        dots: true,
+        dots: false,
         infinite: true,
         speed: 1000,
         slidesToShow: 1,
@@ -21,7 +21,7 @@ $(document).ready(function () {
         slidesToShow: 2,
         slidesToScroll: 1,
         autoplaySpeed: 2000,
-        arrows: false,
+        arrows: true,
         responsive: [
             {
                 breakpoint: 500,
