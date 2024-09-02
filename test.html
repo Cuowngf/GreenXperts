@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slick Slider Example</title>
+    <!-- Slick CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <style>
+        /* Basic styles for slick sliders */
+        .slider-for, .slider-nav {
+            width: 80%;
+            margin: 0 auto;
+        }
+        .slider-for img, .slider-nav img {
+            width: 20%;
+            display: block;
+        }
+        .slider-nav {
+            margin-top: 10px;
+        }
+        .slick-slide {
+            margin: 0 10px;
+        }
+        .slick-center .slick-slide img {
+            opacity: 1;
+            transition: opacity 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <!-- Main slider -->
+    <div class="slider-for">
+        <div><img src="image/contrung1.png" alt="Slide 1"></div>
+        <div><img src="image/contrung2.png" alt="Slide 2"></div>
+        <div><img src="image/contrung3.png" alt="Slide 3"></div>
+        <div><img src="image/contrung4.png" alt="Slide 3"></div>
+    </div>
+
+    <!-- Navigation slider -->
+    <div class="slider-nav">
+        <div><img src="image/contrung1.png" alt="Slide 1"></div>
+        <div><img src="image/contrung2.png" alt="Slide 2"></div>
+        <div><img src="image/contrung3.png" alt="Slide 3"></div>
+        <div><img src="image/contrung4.png" alt="Slide 3"></div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Slick JS -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+        $(document).ready(function(){
+            $('.slider-for').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false,
+                fade: true,
+                asNavFor: '.slider-nav'
+            });
+            $('.slider-nav').slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                asNavFor: '.slider-for',
+                dots: true,
+                centerMode: true,
+                focusOnSelect: true
+            });
+        });
+    </script>
+</body>
+</html>
