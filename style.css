@@ -12,9 +12,23 @@ ul {
   padding: 0;
 }
 
+* {
+  font-size: 14px;
+}
+@media (min-width: 500px) {
+  * {
+    font-size: 16px;
+  }
+}
+
 .title-text {
-  font-size: 32px;
+  font-size: 18px;
   font-weight: 700;
+}
+@media (min-width: 500px) {
+  .title-text {
+    font-size: 32px;
+  }
 }
 
 .title-green {
@@ -352,7 +366,8 @@ ul {
   }
 }
 @media (max-width: 530px) {
-  .banner::after, .banner .phone-contact {
+  .banner::after,
+  .banner .phone-contact {
     display: none;
   }
 }
@@ -1700,7 +1715,6 @@ ul {
   color: #608127;
   background-color: #edffe1;
   font-weight: bold;
-  font-size: 20px;
   padding: 10px;
   text-align: center;
 }
@@ -1811,8 +1825,13 @@ ul {
 .lienhe form {
   width: 70%;
   margin: auto;
-  padding: 50px;
+  padding: 20px;
   position: relative;
+}
+@media (min-width: 768px) {
+  .lienhe form {
+    padding: 50px;
+  }
 }
 .lienhe form::after {
   content: "";
@@ -1830,12 +1849,22 @@ ul {
 }
 .lienhe form p {
   text-align: center;
-  font-size: 30px;
+  font-size: 16px;
   box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.3);
   background-color: #608127;
   border-radius: 5px;
   padding: 5px 0;
   color: #edffe1;
+}
+@media (min-width: 500px) {
+  .lienhe form p {
+    font-size: 20px;
+  }
+}
+@media (min-width: 992px) {
+  .lienhe form p {
+    font-size: 30px;
+  }
 }
 .lienhe form button {
   display: block;
